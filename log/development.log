@@ -8007,3 +8007,346 @@ Started GET "/assets/pics.self-53acfca9daa5f44307d82bb83d2c05d33a244dcd020f0e553
 
 
 Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-19 16:57:54 -0800
+
+
+Started GET "/" for ::1 at 2016-01-19 16:58:58 -0800
+Processing by PicsController#index as HTML
+  [1m[35mPic Load (0.2ms)[0m  SELECT "pics".* FROM "pics"  ORDER BY created_at DESC
+  Rendered pics/index.html.haml within layouts/application (4.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/6" for ::1 at 2016-01-19 18:05:36 -0800
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPic Load (0.3ms)[0m  SELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ? AND "votes"."vote_scope" IS NULL  [["votable_id", 6], ["votable_type", "Pic"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pics/show.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 320ms (Views: 314.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fc969dc1c6ff531abcf368089dcbaf5775133b0626ff56b52301a059fc0f9e1e.woff" for ::1 at 2016-01-19 18:05:36 -0800
+
+
+Started GET "/users/edit" for ::1 at 2016-01-19 18:05:40 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241766680840 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:13)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241766680840 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:14)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241766680840 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:15)
+  Rendered devise/registrations/edit.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 184ms (Views: 176.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/new" for ::1 at 2016-01-19 18:06:08 -0800
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_pics__form_html_haml__1555055555248299891_70241722730680 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/pics/_form.html.haml:12)
+  Rendered pics/_form.html.haml (19.2ms)
+  Rendered pics/new.html.haml within layouts/application (28.9ms)
+Completed 200 OK in 204ms (Views: 199.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-19 18:06:10 -0800
+Processing by PicsController#index as HTML
+  [1m[35mPic Load (0.4ms)[0m  SELECT "pics".* FROM "pics"  ORDER BY created_at DESC
+  Rendered pics/index.html.haml within layouts/application (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 154ms (Views: 152.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-19 18:06:11 -0800
+Processing by PicsController#index as HTML
+  [1m[35mPic Load (0.5ms)[0m  SELECT "pics".* FROM "pics"  ORDER BY created_at DESC
+  Rendered pics/index.html.haml within layouts/application (9.2ms)
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 283ms (Views: 278.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pics/6" for ::1 at 2016-01-19 18:06:12 -0800
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPic Load (0.2ms)[0m  SELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ? AND "votes"."vote_scope" IS NULL  [["votable_id", 6], ["votable_type", "Pic"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pics/show.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 160ms (Views: 156.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pics/6/edit" for ::1 at 2016-01-19 18:06:14 -0800
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPic Load (0.3ms)[0m  SELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_pics__form_html_haml__1555055555248299891_70241722730680 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/pics/_form.html.haml:12)
+  Rendered pics/_form.html.haml (16.6ms)
+  Rendered pics/edit.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 173ms (Views: 169.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-01-19 18:06:19 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241766680840 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:13)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241766680840 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:14)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241766680840 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:15)
+  Rendered devise/registrations/edit.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 173ms (Views: 169.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-01-19 18:09:02 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241783440780 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:20)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241783440780 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:21)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241783440780 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:22)
+  Rendered devise/registrations/edit.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 189ms (Views: 186.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/masonry/transitions.self-a7dd920491429cc09dda36f003350cf98f5cec3c45d00888fab83293dce6ce92.css?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/pics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/application.self-54212b67c1a8a12d9694cadf6fcc4d0c654052d95e88e9d10a515dcfa164f8d1.css?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-01-19 18:09:03 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/masonry/jquery.masonry.self-e55a2ca40f0bd20129930439c10a6b8c5dd26787b41fd8427db5b9da8c2af52f.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/pics.self-53acfca9daa5f44307d82bb83d2c05d33a244dcd020f0e5534c4af44c8656b23.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-19 18:09:04 -0800
+
+
+Started GET "/users/edit" for ::1 at 2016-01-19 18:09:57 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:26: syntax error, unexpected ';'
+...utton :submit, "Update", class; "btn btn-info" );@output_buf...
+...                               ^):
+  app/views/devise/registrations/edit.html.erb:26: syntax error, unexpected ';'
+
+
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.3ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (151.6ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (153.4ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/Mikamiko/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (328.8ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-01-19 18:10:10 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241735166340 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:20)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241735166340 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:21)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241735166340 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:22)
+  Rendered devise/registrations/edit.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 175ms (Views: 172.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/masonry/transitions.self-a7dd920491429cc09dda36f003350cf98f5cec3c45d00888fab83293dce6ce92.css?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/pics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/application.self-54212b67c1a8a12d9694cadf6fcc4d0c654052d95e88e9d10a515dcfa164f8d1.css?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/masonry/jquery.masonry.self-e55a2ca40f0bd20129930439c10a6b8c5dd26787b41fd8427db5b9da8c2af52f.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/assets/pics.self-53acfca9daa5f44307d82bb83d2c05d33a244dcd020f0e5534c4af44c8656b23.js?body=1" for ::1 at 2016-01-19 18:10:11 -0800
+
+
+Started GET "/users/edit" for ::1 at 2016-01-19 18:14:08 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241779901360 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:23)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241779901360 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:28)
+DEPRECATION WARNING: `#column_for_attribute` will return a null object for non-existent columns in Rails 5. Use `#has_attribute?` if you need to check for an attribute's existence. (called from block in _app_views_devise_registrations_edit_html_erb__29350163004990263_70241779901360 at /Users/Mikamiko/Desktop/RoR/instagramm/app/views/devise/registrations/edit.html.erb:33)
+  Rendered devise/registrations/edit.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 226ms (Views: 222.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/masonry/transitions.self-a7dd920491429cc09dda36f003350cf98f5cec3c45d00888fab83293dce6ce92.css?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/pics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/application.self-54212b67c1a8a12d9694cadf6fcc4d0c654052d95e88e9d10a515dcfa164f8d1.css?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/masonry/jquery.masonry.self-e55a2ca40f0bd20129930439c10a6b8c5dd26787b41fd8427db5b9da8c2af52f.js?body=1" for ::1 at 2016-01-19 18:14:09 -0800
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-01-19 18:14:10 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 18:14:10 -0800
+
+
+Started GET "/assets/pics.self-53acfca9daa5f44307d82bb83d2c05d33a244dcd020f0e5534c4af44c8656b23.js?body=1" for ::1 at 2016-01-19 18:14:10 -0800
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-01-19 18:14:10 -0800
